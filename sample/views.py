@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.core.paginator import Paginator
 from .models import house,station1,regionInfo1
 from .forms import FindForm,SelectForm
-from beautifulsoup4 import BeautifulSoup
+import BeautifulSoup
 import requests
 
 def index(request, num=1):
