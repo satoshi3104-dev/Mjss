@@ -28,24 +28,24 @@ def index(request, num=1):
      #add = add.replace("\r", "")
      #add = add.replace("\n", "")
      #add = add.replace("[地図]", "")
-     add = "test"add.replace("\xa0", "")
+     #add = "test"#add.replace("\xa0", "")
 
      #セット料金
      #setFee = td[8].text.strip()
      #sFee = setFee[1:4] #セット料金を抽出
      #if sFee.isdigit() != True:
-        sFee = "11"
+      #  sFee = "11"
 
      #フリー料金
      #freeFee = td[7].text.strip()
      #fFee = freeFee[1:4] #セット料金を抽出
      #if fFee.isdigit() != True:
-        fFee = "11"
+      #  fFee = "11"
      
      #最寄り駅
-     nstation = "蒲田駅"
+     #nstation = "蒲田駅"
      #市町村
-     city = "大田"
+     #city = "大田"
 
      #お店のサービス情報を取得
      #tags = table[1]
@@ -53,20 +53,20 @@ def index(request, num=1):
 
      #卓数を取得
      #Mjtable = tds[0].text
-     Mt = 1
+     #Mt = 1
 
      #stationテーブルより駅名を取得
-     nstation = station1.objects.filter(stationName=nstation)
-     sta = nstation[0]
+     #nstation = station1.objects.filter(stationName=nstation)
+     #sta = nstation[0]
 
      #regionInfoテーブルより駅名を取得
-     city = regionInfo1.objects.filter(cityName=city)
-     ci = city[0]
+     #city = regionInfo1.objects.filter(cityName=city)
+     #ci = city[0]
 
      #Mjhouseオブジェクトを作成    
-     house1 = house(name=title,setFee=sFee,FreeFee=fFee,mjTables=Mt,address=add,station=sta,city=ci)
+     #house1 = house(name=title,setFee=sFee,FreeFee=fFee,mjTables=Mt,address=add,station=sta,city=ci)
 
-     house1.save() 
+     #house1.save() 
      mjHouseData = house.objects.all()
      page = Paginator(mjHouseData, 10)     
 
