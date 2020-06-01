@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import MJhouse,station1,regionInfo1 
 #from bs4 import BeautifulSoup
-import requests
+#import requests
 
 def index(request):
     
