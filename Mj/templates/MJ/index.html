@@ -1,0 +1,51 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+   <meta charset="utf-8">
+   <title>お得な雀荘発見サービス</title>
+     <link rel="stylesheet" type="text/css"
+    href="{% static 'Mj/css/style.css' %}" />
+</head>
+
+<body>
+  <br>
+  <h1>お得な<h1>
+  <br>
+  <br>
+  <table>
+     <tr>
+       <th>ID</th>
+       <th>店名</th>
+       <th>セット料金</th>
+       <th>フリー料金</th>
+       <th>最寄り駅までの距離</th>     
+       <th>イベント回数</th>
+       <th>卓数</th>
+       <th>最寄り駅</th>
+       <th>駅の乗降人数</th>
+       <th>平均年収</th>
+
+     </tr>
+     {% for item in MjData %}
+       <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.setFee}}</td>
+        <td>{{item.FreeFee}}</td>
+        <td>{{item.destanceToStation}}</td>     
+        <td>{{item.eventTimes}}</td>
+        <td>{{item.mjTables}}</td>
+     {% endfor %}
+     {% for item2 in staData %}
+        <td>{{item2.station}}</td>
+        <td>{{item2.usertOfStation}}</td>
+     {% endfor %}
+     {% for item3 in regData %}
+        <td>{{item3.annualIncome}}</td>
+     {% endfor %}
+      <tr>
+
+  </table>     
+</body>
+</html>
