@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Mj/', include('Mj.urls')),
     path('sample/', include('sample.urls')),
+    path('satoshi3104dev.pythonanywhere.com/', include('sample.urls')),
 ]
